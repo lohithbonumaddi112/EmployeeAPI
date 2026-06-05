@@ -18,9 +18,11 @@ namespace EmployeeAPI.Repository
             var emp= await _context.Employees.ToListAsync();
             return emp;
         }
-        public async Task<Employee> GetById(int id)
+        public async Task<Employee?> GetById(int id)
         {
+            
             var emp = await _context.Employees.FindAsync(id);
+
             return emp;
         }
 
