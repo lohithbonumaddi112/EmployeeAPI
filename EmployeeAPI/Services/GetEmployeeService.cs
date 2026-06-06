@@ -39,7 +39,7 @@ namespace EmployeeAPI.Services
                     Salary = e.Salary
                 })
                 .ToListAsync();
-            Console.WriteLine(_context.Entry(employees).State);
+            
             return employees;
         }
         public async Task<EmployeeDto?> GetEmployeesByName(string name)
