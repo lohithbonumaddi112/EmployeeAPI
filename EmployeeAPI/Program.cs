@@ -11,6 +11,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 
+
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddDbContext<DbemployeeContext>(options =>
@@ -52,6 +53,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 
     );
+
 builder.Services.AddSwaggerGen(options =>
 {
 
@@ -114,8 +116,7 @@ builder.Services.AddAuthorization(options =>
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
+
     app.UseSwagger();
    app.UseSwaggerUI(options =>
     {
@@ -130,7 +131,7 @@ if (app.Environment.IsDevelopment())
 
 
 
-}
+
 // Configure the HTTP request pipeline.
 
 

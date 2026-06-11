@@ -20,8 +20,7 @@ public partial class DbemployeeContext : DbContext
     {
         if (!optionsBuilder.IsConfigured)
         {
-            optionsBuilder.UseSqlServer(
-                "Server=(localdb)\\ProjectModels;Database=DBEmployee;Trusted_Connection=True;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("Server=(localdb)\\ProjectModels;Database=EmployeeDB;Trusted_Connection=True;MultipleActiveResultSets=true");
         }
     }
     public virtual DbSet<Employee> Employees { get; set; }

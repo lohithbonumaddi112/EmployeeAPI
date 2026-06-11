@@ -76,7 +76,6 @@ namespace EmployeeAPI.Controllers
     }
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize(Roles ="Admin")]
     public class UserController : ControllerBase
     {
         private readonly IRegisterUser _registerUserService;
